@@ -21,24 +21,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     acessoriosContainer.innerHTML = "";
     carousel.innerHTML = "";
 
-    // ==========================
     //   RENDER COLEÇÕES
-    // ==========================
     colecoes.forEach((colecao, index) => {
       //if (!colecao.id) colecao.id = gerarId();
 
-      // CARROSSEL
-      if (colecao.destaque) {
-        const activeClass = index === 0 ? "active" : "";
-        carousel.innerHTML += `
-          <div class="carousel-item ${activeClass}" data-bs-interval="8000">
-            <img src="${colecao.imagem_principal}" class="d-block w-100" alt="${colecao.titulo}">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>${colecao.titulo}</h5>
-              <p>${colecao.descricao}</p>
-            </div>
-          </div>`;
-      }
+// CARROSSEL
+if (colecao.destaque) {
+  const activeClass = index === 0 ? "active" : "";
+  carousel.innerHTML += `
+    <div class="carousel-item ${activeClass}" data-bs-interval="8000">
+      <a href="detalhes.html?id=${colecao.id}">
+        <img src="${colecao.imagem_principal}" class="d-block w-100" alt="${colecao.titulo}">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>${colecao.titulo}</h5>
+          <p>${colecao.descricao}</p>
+        </div>
+      </a>
+    </div>`;
+}
 
       // CARD
       colecoesContainer.innerHTML += `
@@ -59,9 +59,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>`;
     });
 
-    // ==========================
     //   RENDER ACESSÓRIOS
-    // ==========================
+
     acessorios.forEach((acessorio) => {
       if (!acessorio.id) acessorio.id = gerarId();
 
@@ -159,7 +158,7 @@ function carregarFavoritos() {
   });
 }
 
-// Renderiza a seção "Meus Favoritos"
+// Renderiza os favs
 function renderizarFavoritos() {
   const container = document.getElementById("favoritos-container");
   container.innerHTML = "";
@@ -176,3 +175,4 @@ function renderizarFavoritos() {
     container.appendChild(clone);
   });
 }
+

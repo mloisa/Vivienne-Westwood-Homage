@@ -16,13 +16,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   apresentarDetalhes(item);
-
-  // Botão editar redireciona para postar.html com ?id=
   document.getElementById("btn-editar").addEventListener("click", () => {
     window.location.href = `postar.html?id=${item.id}`;
   });
-
-  // Botão excluir envia DELETE
   document.getElementById("btn-excluir").addEventListener("click", async () => {
     if (confirm(`Tem certeza que deseja excluir "${item.titulo}"?`)) {
       try {
@@ -41,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 });
 
-// 🔍 Busca item pelo ID nas rotas /colecoes e /acessorios
+// Buscar
 async function buscarItemPorId(id) {
   const endpoints = ["/colecoes", "/acessorios"];
 

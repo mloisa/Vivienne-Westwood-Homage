@@ -14,6 +14,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+.autora h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.autora p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.autora .redes a {
+  color: #000;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.autora .redes a:hover {
+  color: #d63384; /* cor de destaque */
+}
+
 .favorite-btn {
   position: absolute;
   top: 10px;

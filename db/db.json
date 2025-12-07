@@ -76,6 +76,21 @@
           "descricao": "Detalhe da passarela Café Society FW1994"
         }
       ]
+    },
+    {
+      "id": "ec6d97d2-87ab-4d3f-8123-fb7fdf287e8b",
+      "titulo": "Coleção Nova",
+      "descricao": "Nova coleção...",
+      "conteudo": "Nova coleção",
+      "categoria": "Coleções destaque",
+      "destaque": false,
+      "data": "2025-12-07",
+      "imagem_principal": "./assets/imagens/default.jpg",
+      "imagens_complementares": [
+        {
+          "src": "./assets/imagens/default.jpg"
+        }
+      ]
     }
   ],
   "acessorios": [
